@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widget/MyStatelessWidget.dart';
 
-class MyGridView extends MyStatelessWidget {
+class MyGridView extends StatelessWidget {
 
   String title;
   MyGridView({Key key, @required this.title}) : super(key: key);
@@ -51,8 +50,4 @@ class MyGridView extends MyStatelessWidget {
     );
   }
 
-  @override
-  String getTitle() {
-    return this.title;
-  }
 }

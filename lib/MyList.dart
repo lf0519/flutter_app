@@ -25,7 +25,7 @@ class MyList extends StatelessWidget{
            _onItemClick(context, index);
          },
          title: Center(
-           child: Text(LeanItem.getItemMap()[index].getTitle()),
+           child: Text(LeanItem.getTitle()[index]),
          ),
        );
   }
