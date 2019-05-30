@@ -35,7 +35,8 @@ class MyList extends StatelessWidget{
        MaterialPageRoute(
          builder: (context){
            return LeanItem.getItemMap()[index];
-         }
+         },
+        // maintainState: false,
        )
      );
   }
