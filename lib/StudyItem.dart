@@ -4,6 +4,8 @@ import 'package:flutter_app/widget/CounterWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widget/WidgetManageSelfState.dart';
 import 'package:flutter_app/widget/TextWidget.dart';
+import 'package:flutter_app/widget/ContainerWidget.dart';
+import 'package:flutter_app/widget/AddAndRemoveView.dart';
 class LeanItem {
 
   static Map<int,Widget>getItemMap(){
@@ -13,6 +15,8 @@ class LeanItem {
      map[2] = CounterWidget(title: "counterWidget");
      map[3] = WidgetManageSelfState();
      map[4] = TextWidget();
+     map[5] = ContainerWidget();
+     map[6] = AddAndRemoveView();
      return map;
   }
   static List<String> getTitle(){
@@ -22,6 +26,8 @@ class LeanItem {
     items.add("计数器");
     items.add("状态管理");
     items.add("Text Widget");
+    items.add("Container");
+    items.add("添加删除view");
     return items;
   }
 }
