@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/CustomRoute.dart';
 
 class BottomAppBarWiget extends StatefulWidget {
   @override
@@ -21,9 +22,7 @@ class _BottomAppBarWigetState extends State<BottomAppBarWiget> {
       body: pages[_currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context){
-            return AddPages();
-          }));
+          Navigator.push(context, CustomRoute(AddPages(), 3));
         },
         tooltip: "我在这",
         child: Icon(
