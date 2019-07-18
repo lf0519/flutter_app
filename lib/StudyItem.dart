@@ -1,15 +1,17 @@
-import 'package:flutter_app/widget/RowLearn.dart';
-import 'package:flutter_app/widget/MyGridView.dart';
-import 'package:flutter_app/widget/CounterWidget.dart';
+import 'widget/RowLearn.dart';
+import 'widget/MyGridView.dart';
+import 'widget/CounterWidget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widget/WidgetManageSelfState.dart';
-import 'package:flutter_app/widget/TextWidget.dart';
-import 'package:flutter_app/widget/ContainerWidget.dart';
-import 'package:flutter_app/widget/AddAndRemoveView.dart';
-import 'package:flutter_app/widget/BottomNavigationBarWidget.dart';
-import 'package:flutter_app/widget/BottomAppBarWiget.dart';
-import 'package:flutter_app/widget/CustomRouteWidget.dart';
-import 'package:flutter_app/widget/TabBarWidget.dart';
+import 'widget/WidgetManageSelfState.dart';
+import 'widget/TextWidget.dart';
+import 'widget/ContainerWidget.dart';
+import 'widget/AddAndRemoveView.dart';
+import 'widget/BottomNavigationBarWidget.dart';
+import 'widget/BottomAppBarWiget.dart';
+import 'widget/CustomRouteWidget.dart';
+import 'widget/TabBarWidget.dart';
+import 'widget/SwitchAndCheckBox.dart';
+import 'widget/TextFieldWidget.dart';
 
 class LeanItem {
   static Map<int, Widget> getItemMap() {
@@ -25,6 +27,8 @@ class LeanItem {
     map[8] = BottomAppBarWiget();
     map[9] = CustomRouteWidget();
     map[10] = TabBarWidget();
+    map[11] = SwitchAndCheckBox();
+    map[12] = TextFieldWidget();
     return map;
   }
 
@@ -41,7 +45,9 @@ class LeanItem {
       ..add("底部导航")
       ..add("不规则底部导航")
       ..add("路由动画")
-      ..add("Tab  Bar");
+      ..add("Tab  Bar")
+      ..add("switch and checkbox")
+      ..add("input form");
     return items;
   }
 }
