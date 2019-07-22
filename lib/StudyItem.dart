@@ -12,6 +12,7 @@ import 'widget/CustomRouteWidget.dart';
 import 'widget/TabBarWidget.dart';
 import 'widget/SwitchAndCheckBox.dart';
 import 'widget/TextFieldWidget.dart';
+import 'widget/TextFormFieldWidget.dart';
 
 class LeanItem {
   static Map<int, Widget> getItemMap() {
@@ -29,6 +30,7 @@ class LeanItem {
     map[10] = TabBarWidget();
     map[11] = SwitchAndCheckBox();
     map[12] = TextFieldWidget();
+    map[13] = TextFormFieldWidget();
     return map;
   }
 
@@ -47,7 +49,8 @@ class LeanItem {
       ..add("路由动画")
       ..add("Tab  Bar")
       ..add("switch and checkbox")
-      ..add("input form");
+      ..add("text field")
+      ..add("text field form");
     return items;
   }
 }
