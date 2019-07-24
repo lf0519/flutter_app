@@ -10,7 +10,6 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import io.flutter.app.FlutterActivity;
-import io.flutter.plugins.GeneratedPluginRegistrant;
 import io.flutter.view.FlutterView;
 
 public class MainActivity extends FlutterActivity {
@@ -18,7 +17,7 @@ public class MainActivity extends FlutterActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: ");
-        GeneratedPluginRegistrant.registerWith(this);
+        io.flutter.plugins.GeneratedPluginRegistrant.registerWith(this);
         setStatusBarFullTransparent();
     }
     protected void setStatusBarFullTransparent() {

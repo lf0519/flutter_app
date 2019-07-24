@@ -14,7 +14,9 @@ import 'widget/SwitchAndCheckBox.dart';
 import 'widget/TextFieldWidget.dart';
 import 'widget/TextFormFieldWidget.dart';
 import 'widget/ItemWidget.dart';
-
+import 'widget/login_page.dart';
+import 'widget/wrap_widget.dart';
+import 'widget/flow_widget.dart';
 class LeanItem {
   static Map<int, Widget> getItemMap() {
     Map<int, Widget> map = new Map();
@@ -33,6 +35,9 @@ class LeanItem {
     map[12] = TextFieldWidget();
     map[13] = TextFormFieldWidget();
     map[14] = ItemChatPage();
+    map[15] = LoginPage();
+    map[16] = WrapWidget();
+    map[17] = FlowWidget();
     return map;
   }
 
@@ -53,7 +58,10 @@ class LeanItem {
       ..add("switch and checkbox")
       ..add("text field")
       ..add("text field form")
-      ..add("list item ");
+      ..add("list item ")
+      ..add("登录界面")
+      ..add("wrap widget")
+      ..add("flow widget");
     return items;
   }
 }
