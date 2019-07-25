@@ -17,6 +17,11 @@ import 'widget/ItemWidget.dart';
 import 'widget/login_page.dart';
 import 'widget/wrap_widget.dart';
 import 'widget/flow_widget.dart';
+import 'widget/custom_scroll_view.dart';
+import 'widget/scroll_controller_widget.dart';
+import 'widget/notification_listener_widget.dart';
+import 'widget/share_data_widget.dart';
+import 'widget/pointer_widget.dart';
 class LeanItem {
   static Map<int, Widget> getItemMap() {
     Map<int, Widget> map = new Map();
@@ -38,6 +43,11 @@ class LeanItem {
     map[15] = LoginPage();
     map[16] = WrapWidget();
     map[17] = FlowWidget();
+    map[18] = CustomScrollWidget();
+    map[19] = ScrollControllerWideget();
+    map[20] = NotificationListenerWidget();
+    map[21] = ShareDataWidget();
+    map[22] = PointerWidget();
     return map;
   }
 
@@ -61,7 +71,12 @@ class LeanItem {
       ..add("list item ")
       ..add("登录界面")
       ..add("wrap widget")
-      ..add("flow widget");
+      ..add("flow widget")
+      ..add("custom scroll")
+      ..add("scroll controller")
+      ..add("scroll notification listener")
+      ..add("share data")
+      ..add("pointer event");
     return items;
   }
 }
