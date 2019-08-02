@@ -1,13 +1,15 @@
-import 'package:flutter/material.dart';
-import 'StudyItem.dart';
 import 'package:flutter/cupertino.dart';
-import 'widget/Student.dart';
-import 'dart/ShoppingCart.dart';
+import 'package:flutter/material.dart';
+
+import 'StudyItem.dart';
 import 'dart/Item.dart';
+import 'dart/ShoppingCart.dart';
+
 
 class MyList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     ShoppingCart.withCode(name: "小明", code: "12312312")
       ..items = [Item(12.0, "苹果"), Item(6, "西红柿")]
       ..printInfo();

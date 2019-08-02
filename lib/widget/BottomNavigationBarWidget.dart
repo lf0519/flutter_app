@@ -109,7 +109,6 @@ class OrderPages extends StatefulWidget {
 }
 
 class _OrderPagesState extends State<OrderPages> {
-
   static const String loadingTag = "####loading_tag###";
   List<String> _myListString = List();
 
@@ -117,7 +116,7 @@ class _OrderPagesState extends State<OrderPages> {
   void initState() {
     super.initState();
     for (int a = 0; a < 30; a++) {
-       _myListString.add(WordPair.random().asPascalCase);
+      _myListString.add(WordPair.random().asPascalCase);
     }
     this._myListString.add(loadingTag);
   }
@@ -125,54 +124,51 @@ class _OrderPagesState extends State<OrderPages> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: <Widget>[
-          ListTile(
-            title: Text("列表")
-          ),
-          Expanded(
-            child: CupertinoScrollbar(child: ListView.builder(
-              itemBuilder: (ctx, index) {
-                if(this._myListString[index] == loadingTag){
-                  if(this._myListString.length < 100){
-                    _retrieveData();
-                    return Container(
-                      padding: const EdgeInsets.all(16.0),
-                      alignment: Alignment.center,
-                      child: SizedBox(
-                          width: 24.0,
-                          height: 24.0,
-                          child: CircularProgressIndicator(strokeWidth: 2.0)
-                      ),
-                    );
-                  }else{
-
-                    return Container(
-                      padding: EdgeInsets.all(16),
-                      alignment: Alignment.center,
-                      child: Text("没有更多数据"),
-                    );
-                  }
+        child: Column(
+      children: <Widget>[
+        ListTile(title: Text("列表")),
+        Expanded(
+          child: CupertinoScrollbar(
+              child: ListView.builder(
+            itemBuilder: (ctx, index) {
+              if (this._myListString[index] == loadingTag) {
+                if (this._myListString.length < 100) {
+                  _retrieveData();
+                  return Container(
+                    padding: const EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: SizedBox(
+                        width: 24.0,
+                        height: 24.0,
+                        child: CircularProgressIndicator(strokeWidth: 2.0)),
+                  );
+                } else {
+                  return Container(
+                    padding: EdgeInsets.all(16),
+                    alignment: Alignment.center,
+                    child: Text("没有更多数据"),
+                  );
                 }
-                return Container(
-                  height: 50,
-                  alignment:Alignment.center,
-                  child: Text(this._myListString[index]),
-                );
-              },
-              itemCount: this._myListString.length,
-            )),
-          ),
-        ],
-      )
-    );
+              }
+              return Container(
+                height: 50,
+                alignment: Alignment.center,
+                child: Text(this._myListString[index]),
+              );
+            },
+            itemCount: this._myListString.length,
+          )),
+        ),
+      ],
+    ));
   }
 
-  void _retrieveData() {
+  void _retrieveData() async {
+    print("----------data---start-----");
+
     Future.delayed(Duration(seconds: 2)).then((e) {
       this._myListString.insertAll(this._myListString.length - 1,
-          generateWordPairs().take(20).map((e) => e.asPascalCase).toList()
-      );
+          generateWordPairs().take(20).map((e) => e.asPascalCase).toList());
       setState(() {
         //重新构建列表
       });

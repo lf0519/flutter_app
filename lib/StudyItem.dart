@@ -22,6 +22,7 @@ import 'widget/scroll_controller_widget.dart';
 import 'widget/notification_listener_widget.dart';
 import 'widget/share_data_widget.dart';
 import 'widget/pointer_widget.dart';
+import 'widget/turn_box_route.dart';
 class LeanItem {
   static Map<int, Widget> getItemMap() {
     Map<int, Widget> map = new Map();
@@ -48,6 +49,7 @@ class LeanItem {
     map[20] = NotificationListenerWidget();
     map[21] = ShareDataWidget();
     map[22] = PointerWidget();
+    map[23] = TurnBoxRoute();
     return map;
   }
 
@@ -76,7 +78,8 @@ class LeanItem {
       ..add("scroll controller")
       ..add("scroll notification listener")
       ..add("share data")
-      ..add("pointer event");
+      ..add("pointer event")
+      ..add("custom widget");
     return items;
   }
 }
